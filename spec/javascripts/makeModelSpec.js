@@ -38,6 +38,9 @@ describe("Model", function(){
 
     it("doesn't set property directly on model", function(){
       expect(model.name).toBe(undefined);
+      model.set({age: 30})
+      expect(model.get("name")).toBe("Sparky");
+      expect(model.get("age")).toBe(30);
     });
 
   });
